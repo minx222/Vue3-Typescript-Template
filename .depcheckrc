@@ -1,0 +1,18 @@
+"ignores": [
+    "eslint", 
+    "prettier",
+    "eslint-plugin-vue",
+    "build",
+    "@rushstack/eslint-patch", 
+    "@vue/*", 
+    "postcss",
+    "postcss-pxtorem",
+    "autoprefixer",
+    "tailwindcss",
+    "sass-loader",
+    "@commitlint/cli",
+    "@commitlint/config-conventional",
+    "stylelint",
+    "stylelint-config-standard-scss"
+]
+'skip-missing': true
