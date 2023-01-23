@@ -1,7 +1,7 @@
 {
-  "name": "vue3ts-mcx",
-  "version": "1.0.0",
-  "private": false,
+  "name": "vue3ts",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -33,7 +33,7 @@
     "autoprefixer": "^10.4.13",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
-    "husky": "^8.0.3",
+    "husky": "^8.0.2",
     "jsdom": "^20.0.3",
     "lint-staged": "^13.1.0",
     "npm-run-all": "^4.1.5",
