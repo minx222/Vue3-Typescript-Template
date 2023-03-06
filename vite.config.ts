@@ -16,11 +16,15 @@ export default defineConfig({
     vue(),
     vueJsx(),
     // 组件导入
-    Components({
-      dirs: ['src/components'],
-      resolvers: [AntDesignVueResolver()],
-      dts: './types/global/componentsImport.d.ts'
-    }),
+    ...[
+      config.build.autoImprotCompents
+        ? Components({
+            dirs: ['src/components'],
+            resolvers: [AntDesignVueResolver()],
+            dts: './types/global/componentsImport.d.ts'
+          })
+        : []
+    ],
     // 模块注入
     AutoImport({
       imports: ['vue', 'vue-router'],

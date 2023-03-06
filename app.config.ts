@@ -18,7 +18,8 @@ export default {
   ],
   build: {
     outputDir: 'dist',
-    gizp: true
+    gizp: true,
+    autoImprotCompents: true
   },
   router: {}
 }

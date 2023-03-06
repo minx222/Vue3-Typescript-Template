@@ -1,12 +1,12 @@
 {
-  "name": "{{ projectName }}",
+  "name": "vue3-ts-template",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint:eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "lint:eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "prepare": "husky install"
   },

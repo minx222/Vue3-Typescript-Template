@@ -20,7 +20,6 @@ module.exports = {
   },
   rules: {
     'vue/script-setup-uses-vars': 'error',
-    'no-unused-vars': 2, // 变量未使用
     // switch语句强制default分支，也可添加 // no default 注释取消此次警告
     'default-case': 2,
     'no-console': 1, //禁止使用console
@@ -33,14 +32,9 @@ module.exports = {
     // 关闭名称校验
     'vue/multi-word-component-names': 'off',
     '@typescript-eslint/no-explicit-any': ['off'], //允许使用any类型
+    'no-unused-vars': 'off',
+    // 枚举报错
     '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_'
-      }
-    ],
-    'no-unused-vars': [
       'error',
       {
         argsIgnorePattern: '^_',
