@@ -3,9 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import viteCompression from 'vite-plugin-compression'
 
 import config from './app.config'
@@ -15,20 +13,10 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    // 组件导入
-    ...[
-      config.build.autoImprotCompents
-        ? Components({
-            dirs: ['src/components'],
-            resolvers: [AntDesignVueResolver()],
-            dts: './types/global/componentsImport.d.ts'
-          })
-        : []
-    ],
     // 模块注入
     AutoImport({
       imports: ['vue', 'vue-router'],
-      dirs: ['./src/api/**', './src/stores/modules/**'],
+      dirs: ['./src/stores/modules/**'],
       dts: './types/global/typesImport.d.ts'
     }),
     viteCompression({
